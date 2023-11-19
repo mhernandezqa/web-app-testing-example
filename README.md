@@ -38,10 +38,10 @@ webapptestingtemplate/
 
 ```
 
-* Create the starting page file, such as base_page.py, which contains the skeleton of the web page on top of which you should keep building more specific section structures.
+* Create the starting page file, such as base_page.py, which contains the skeleton of the web page on top of which you should keep building more section-specific structures.
 
 ```
-# Base page code
+# base_page.py code
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -63,7 +63,7 @@ class BasePage:
 ```
 
 ```
-# This is an example on how the Inventory page file inheritates the base structure from the Base page file to keep adding more page-specific locators.
+# This is an example on how the inventory_page.py file inheritates the base structure from the Base page file to keep adding more page-specific locators.
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -82,4 +82,53 @@ class InventoryPage(BasePage):
 ```
 * Create the starting test file, such as test_base.py, which contains the essential actions that must be executed before each separated test: initialize the webdriver and login.
 
+```
+# test_base.py file
+
+import pytest
+
+
+@pytest.mark.usefixtures("chrome_driver_init")
+@pytest.mark.usefixtures("login_logout")
+class BasicTest:
+    
+    pass
+
+```
+```
+# This is an example on how the in the test_inventory.py the TestInventoryFunctionalityfile class inheritates the base structure from the test_base.py BasicTest to keep adding more test-case-specific functions.
+
+from .test_base import BasicTest
+from pages.inventory_page import InventoryPage
+import pytest
+
+@pytest.mark.usefixtures("check_intentory_url")
+class TestInventoryFunctionality(BasicTest):
+
+    @pytest.fixture(scope="class")
+    def inventory_page(self):
+        return InventoryPage(self.driver)
+
+    @pytest.mark.parametrize("name", ["Sauce Labs Backpack"])
+    def test_item_link(self, name, inventory_page, request):
+        item = inventory_page.item(item_name=name)
+        item.click()
+        driver = request.cls.driver
+        current_url = driver.current_url
+        assert "/inventory-item.html?id=" in current_url
+
+```
 * Create the conftest.py file, which contains the essential pytest fixtures to perform the tests succesfully.
+
+```
+
+# Sneak peek in the conftest.py file that shows the pytest fixture chrome_driver_init, used for initializing the webdriver before each test.
+
+@pytest.fixture(scope="class")
+def chrome_driver_init(request):
+    chrome_driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    request.cls.driver = chrome_driver
+    yield
+    chrome_driver.close()
+
+```

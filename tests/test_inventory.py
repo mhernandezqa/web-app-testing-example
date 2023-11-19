@@ -1,7 +1,6 @@
 from .test_base import BasicTest
 from pages.inventory_page import InventoryPage
 import pytest
-import time
 
 @pytest.mark.usefixtures("check_intentory_url")
 class TestInventoryFunctionality(BasicTest):
