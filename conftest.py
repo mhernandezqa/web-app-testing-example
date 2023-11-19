@@ -56,3 +56,11 @@ def check_checkout_step_one_url(request, login_logout):
     current_url = driver.current_url
     if current_url != checkout_step_one_url:
         driver.get(checkout_step_one_url)
+
+@pytest.fixture(scope="function")
+def check_checkout_step_two_url(request, login_logout):
+    checkout_step_two_url = f"{URL}checkout-step-two.html"
+    driver = request.cls.driver
+    current_url = driver.current_url
+    if current_url != checkout_step_two_url:
+        driver.get(checkout_step_two_url)

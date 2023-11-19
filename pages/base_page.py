@@ -11,19 +11,10 @@ class BasePage:
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 10)
     
-    def app_logo(self, text: str):
-        locator = (By.CLASS_NAME, "app_logo")
-        app_logo = self.wait.until(EC.visibility_of_element_located(locator))
-        return app_logo
-    
     def text_input_by_placeholder(self, placeholder: str):
         locator = (By.XPATH, f"//input[contains(@placeholder,'{placeholder}')]")
-        try:
-            text_input = self.wait.until(EC.visibility_of_element_located(locator))
-            return text_input
-        except TimeoutException:
-            print(f"Element with placeholder '{placeholder}' not found within the specified timeout.")
-            return 
+        text_input = self.wait.until(EC.visibility_of_element_located(locator))
+        return text_input
         
     def add_to_cart_button(self, item_name: str):
         locator = (By.XPATH, f"//div[contains(text(),'{item_name}')]/ancestor::div[contains(@class,'inventory_item')]/descendant::button[contains(text(),'Add to cart')]")
@@ -40,8 +31,8 @@ class BasePage:
         button = self.wait.until(EC.element_to_be_clickable(locator))
         return button
     
-    def input_by_value(self, value: str):
-        locator = (By.XPATH, f"//input[contains(@value,'{value}')]")
+    def input_by_name(self, name: str):
+        locator = (By.XPATH, f"//input[contains(@name,'{name}')]")
         button = self.wait.until(EC.element_to_be_clickable(locator))
         return button
 
