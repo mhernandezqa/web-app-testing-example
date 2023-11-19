@@ -12,6 +12,8 @@ This project uses as reference a web application built for testing pruposes: htt
 
 * Create the conftest.py file, which contains the essential pytest fixtures to perform the tests succesfully.
 
+```
+
 webapptestingtemplate/
 │
 ├── tests/
@@ -39,3 +41,5 @@ webapptestingtemplate/
 ├── pytest.ini
 ├── requirements.txt
 └── run_tests.py
+
+```
