@@ -1,10 +1,10 @@
 # E-Shop Web App Testing Example
 
-# A fully functional EXAMPLE project written in Python showing how to perform UI tests on web applications with the Selenium library and the Pytest test framwework.
+# A fully functional EXAMPLE project written in Python showing how to perform UI tests on web applications with the Selenium library and the Pytest test framework.
 
-This project uses as reference a web application built for testing pruposes: https://www.saucedemo.com/. This project shows how to do the following:
+This project references a web application built for testing purposes: https://www.saucedemo.com/. This project shows how to do the following:
 
-* Establish a base directory structure for organizing your test files, reusable test data, utilities and web pages locators.
+* Establish a base directory structure for organizing test files, reusable test data, utilities, and web page locators.
 
 ```
 
@@ -63,7 +63,7 @@ class BasePage:
 ```
 
 ```
-# This is an example on how the inventory_page.py file inheritates the base structure from the Base page file to keep adding more page-specific locators.
+# This is an example of how the inventory_page.py file inherits the base structure from the Base page file to keep adding more page-specific locators.
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -80,7 +80,7 @@ class InventoryPage(BasePage):
         item = self.wait.until(EC.visibility_of_element_located(locator))
         return item
 ```
-* Create the starting test file, such as test_base.py, which contains the essential actions that must be executed before each separated test: initialize the webdriver and login.
+* Create the starting test file, such as test_base.py, which contains the essential actions to execute before each separate test: initialize the web driver and log in.
 
 ```
 # test_base.py file
@@ -96,7 +96,7 @@ class BasicTest:
 
 ```
 ```
-# This is an example on how the in the test_inventory.py the TestInventoryFunctionalityfile class inheritates the base structure from the test_base.py BasicTest to keep adding more test-case-specific functions.
+# This is an example of how in the test_inventory.py the TestInventoryFunctionalityfile class inherits the base structure from the test_base.py BasicTest to keep adding more test-case-specific functions.
 
 from .test_base import BasicTest
 from pages.inventory_page import InventoryPage
@@ -118,7 +118,7 @@ class TestInventoryFunctionality(BasicTest):
         assert "/inventory-item.html?id=" in current_url
 
 ```
-* Create the conftest.py file, which contains the essential pytest fixtures to perform the tests succesfully.
+* Create the conftest.py file, which contains the essential pytest fixtures to perform the tests successfully.
 
 ```
 
@@ -135,12 +135,12 @@ def chrome_driver_init(request):
 ## How to use this example project:
 
 1. clone this project
-2. Install the required packages. Run this command within the project's root directory.
+2. Install the required libraries, modules and packages. Run this command within the project's root directory.
 ```
-pip install -r requirements. txt
+pip install -r requirements.txt
 ```
 3. (Optional) Run all the tests in the "tests/" directory. Run this command within the project's root directory.
 ```
 pytest tests/
 ```
-4. You can also run specific test. Take look into this CheatSheet to know how: https://cheatography.com/nanditha/cheat-sheets/pytest/#google_vignette
+4. You can also run specific tests. Take a look into this CheatSheet to know how: https://cheatography.com/nanditha/cheat-sheets/pytest/#google_vignette
