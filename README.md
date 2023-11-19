@@ -132,3 +132,15 @@ def chrome_driver_init(request):
     chrome_driver.close()
 
 ```
+## How to use this example project:
+
+1. clone this project
+2. Install the required packages. Run this command within the project's root directory.
+```
+pip install -r requirements. txt
+```
+3. (Optional) Run all the tests in the "tests/" directory. Run this command within the project's root directory.
+```
+pytest tests/
+```
+4. You can also run specific test. Take look into this CheatSheet to know how: https://cheatography.com/nanditha/cheat-sheets/pytest/#google_vignette
