@@ -1,2 +1,4 @@
-# webapptestingtemplate
-This is a template that set de bases to start testing any web application UI using Python, the Selenium library and the Pytest test framework.
+# E-Shop Web App Testing Example
+This is an UI atumation testing sample that executes functionality tests on some of the features of an sample E-Shop - https://www.saucedemo.com/ - with Python, the Selenium library and the Pytest test framework.
+
+

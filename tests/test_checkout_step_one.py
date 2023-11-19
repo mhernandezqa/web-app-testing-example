@@ -1,7 +1,6 @@
 from .test_base import BasicTest
 from pages.checkout_step_one_page import CheckoutStepOnePage
 import pytest
-import time
 
 @pytest.mark.usefixtures("check_checkout_step_one_url")
 class TestCheckoutStepOneFunctionality(BasicTest):
@@ -17,9 +16,9 @@ class TestCheckoutStepOneFunctionality(BasicTest):
         first_name_input_attribute = checkout_step_one_page.text_input_by_placeholder(placeholder=placeholder).get_attribute("value")
         assert text in first_name_input_attribute
 
-    @pytest.mark.parametrize("name, path", [("Continue", "checkout-step-two.html")])
+    @pytest.mark.parametrize("name, path", [("continue", "checkout-step-two.html")])
     def test_continue_button(self, name, path, checkout_step_one_page, request):
-        continue_button = checkout_step_one_page.input_by_value(value=name)
+        continue_button = checkout_step_one_page.input_by_name(name=name)
         continue_button.click()
         driver = request.cls.driver
         current_url = driver.current_url

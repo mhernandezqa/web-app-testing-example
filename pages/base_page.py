@@ -40,8 +40,8 @@ class BasePage:
         button = self.wait.until(EC.element_to_be_clickable(locator))
         return button
     
-    def input_by_value(self, value: str):
-        locator = (By.XPATH, f"//input[contains(@value,'{value}')]")
+    def input_by_name(self, name: str):
+        locator = (By.XPATH, f"//input[contains(@name,'{name}')]")
         button = self.wait.until(EC.element_to_be_clickable(locator))
         return button
 
