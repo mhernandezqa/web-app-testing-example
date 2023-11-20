@@ -143,4 +143,7 @@ pip install -r requirements.txt
 ```
 pytest tests/
 ```
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b5fkUCeJwHk?si=BQw1rJsAfaUcfLh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Watch the video](https://img.youtube.com/vi/b5fkUCeJwHk?si=6QjneV4mgZTHnb3v/hqdefault.jpg)](https://youtu.be/b5fkUCeJwHk?si=6QjneV4mgZTHnb3v)
+
+[<img src="https://img.youtube.com/vi/b5fkUCeJwHk?si=6QjneV4mgZTHnb3v/hqdefault.jpg" width="600" height="300"
+/>](https://www.youtube.com/embed/b5fkUCeJwHk?si=6QjneV4mgZTHnb3v)
