@@ -143,5 +143,7 @@ pip install -r requirements.txt
 ```
 pytest tests/
 ```
-[![Watch the video](https://img.youtube.com/vi/b5fkUCeJwHk/hqdefault.jpg)](https://youtu.be/b5fkUCeJwHk)
+[![Watch the video](https://img.youtube.com/vi/b5fkUCeJwHk/0.jpg)](https://github.com/github/embed/blob/main/docs/ghembed-demo.mp4?raw=true)
+
+
 
