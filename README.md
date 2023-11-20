@@ -1,4 +1,4 @@
-# E-Shop Web App Testing Example
+# E-Commerce Web App Testing Example
 
  
 A fully functional EXAMPLE project written in Python showing how to perform UI tests on web applications with the Selenium library and the Pytest test framework.
