@@ -144,4 +144,7 @@ pip install -r requirements.txt
 ```
 pytest tests/
 ```
-4. You can also run specific tests. Take a look into this CheatSheet to know how: https://cheatography.com/nanditha/cheat-sheets/pytest/#google_vignette
+[![Watch the video](https://img.youtube.com/vi/b5fkUCeJwHk/0.jpg)](https://github.com/github/embed/blob/main/docs/ghembed-demo.mp4?raw=true)
+
+
+
