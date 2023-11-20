@@ -145,5 +145,3 @@ pytest tests/
 ```
 [![Watch the video](https://img.youtube.com/vi/b5fkUCeJwHk/hqdefault.jpg)](https://youtu.be/b5fkUCeJwHk)
 
-[<img src="https://img.youtube.com/vi/b5fkUCeJwHk/hqdefault.jpg" width="600" height="300"
-/>](https://www.youtube.com/embed/b5fkUCeJwHk)
