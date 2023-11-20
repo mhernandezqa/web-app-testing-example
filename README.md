@@ -144,7 +144,15 @@ pip install -r requirements.txt
 ```
 pytest tests/
 ```
-[![Watch the video](https://img.youtube.com/vi/b5fkUCeJwHk/0.jpg)](https://github.com/github/embed/blob/main/docs/ghembed-demo.mp4?raw=true)
+https://github.com/ladriverr/web-app-testing-example/assets/121583772/bd99049b-a8c1-4e0f-b954-bf5217dc250a
+```
+pytest tests/test_inventory.py
+```
+https://github.com/ladriverr/web-app-testing-example/assets/121583772/22d215c1-40a6-4515-9c7e-8be220b6ab02
+```
+pytest tests/test_checkout_step_one.py::TestCheckoutStepOneFunctionality::test_form
+```
+https://github.com/ladriverr/web-app-testing-example/assets/121583772/504d31b9-5292-4bfa-aa61-09301f47b15f
 
 
 
