@@ -1,8 +1,8 @@
 # E-Shop Web App Testing Example
 
-# 
+ 
 A fully functional EXAMPLE project written in Python showing how to perform UI tests on web applications with the Selenium library and the Pytest test framework.
-#
+
 This project references a web application built for testing purposes: https://www.saucedemo.com/. This project shows how to do the following:
 
 * Establish a base directory structure for organizing test files, reusable test data, utilities, and web page locators.
