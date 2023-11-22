@@ -136,7 +136,7 @@ def chrome_driver_init(request):
 ## How to use this example project:
 
 1. clone this project
-2. Install the required libraries, modules and packages. Run this command within the project's root directory.
+2. Install the required libraries, modules, and packages. Run this command within the project's root directory.
 ```
 pip install -r requirements.txt
 ```
@@ -144,15 +144,26 @@ pip install -r requirements.txt
 ```
 pytest tests/
 ```
-https://github.com/mhernandezqa/web-app-testing-example/assets/121583772/bd99049b-a8c1-4e0f-b954-bf5217dc250a
+
+https://github.com/mhernandezqa/web-app-testing-example/assets/121583772/97dccba4-5a04-45f2-a7ad-603c63e5ebb7
+
+
 ```
 pytest tests/test_inventory.py
 ```
-https://github.com/mhernandezqa/web-app-testing-example/assets/121583772/22d215c1-40a6-4515-9c7e-8be220b6ab02
+
+
+https://github.com/mhernandezqa/web-app-testing-example/assets/121583772/4439d0bc-0fea-4d33-b006-e5323f421fae
+
+
 ```
 pytest tests/test_checkout_step_one.py::TestCheckoutStepOneFunctionality::test_form
 ```
-https://github.com/mhernandezqa/web-app-testing-example/assets/121583772/504d31b9-5292-4bfa-aa61-09301f47b15f
+
+
+
+
+https://github.com/mhernandezqa/web-app-testing-example/assets/121583772/08642e7f-79e2-485b-8630-89c24f172ade
 
 
 
